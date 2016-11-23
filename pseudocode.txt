@@ -1,0 +1,56 @@
+// Bot 1
+
+int roll;
+
+void setup() {
+	begin Serial on 9600
+}
+
+void loop() {
+	while(Serial is available) {
+		roll = random(10);
+		if(roll < 2) {
+			bot 1 move backward
+			tell bot 2 to move backward
+		} else if(roll < 6) {
+			roll = random(2);
+			if(roll) {
+				turn right 90 degrees
+				tell bot 2 to turn right 90 degrees
+			} else {
+				turn left 90 degrees
+				tell bot 2 to turn left 90 degrees
+			}
+		} else {
+			bot 1 move forward
+			tell bot 2 to move forward
+		}
+	}
+}
+
+
+// Bot 2
+
+char msg = ' ';
+
+void setup() {
+	begin Serial on 9600
+}
+
+void loop() {
+	while(Serial is available) {
+		msg = read Serial;
+		if(msg=='F') {
+			move forward
+		}
+		if(msg=='B') {
+			move backward
+		}
+		if(msg=='L') {
+			turn left 90 degrees
+		}
+		if(msg=='R') {
+			turn right 90 degrees
+		}
+	}
+}
