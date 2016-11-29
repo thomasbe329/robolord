@@ -4,6 +4,7 @@ Servo leftServo;
 Servo rightServo;
 
 int roll;
+int timedelay;
 
 void setup()
 {
@@ -11,32 +12,39 @@ void setup()
   leftServo.attach(9);
   rightServo.attach(10);
   randomSeed(analogRead(0));
+  delay(5000);
 }
 
 void loop()
 {
   roll = random(10);
+  timedelay = random(250, 1000);
   if(roll < 2) {
-    //leftServo.write(85);
-    //rightServo.write(85);
     Serial.println('B');
-    delay(1500);
+    leftServo.write(75);
+    rightServo.write(75);
+    delay(timedelay);
   } else if(roll < 6) {
     roll = random(2);
     if(roll) {
-      //leftServo.write(85);
-      //rightServo.write(100);
       Serial.println('L');
+      leftServo.write(75);
+      rightServo.write(110);
+      delay(465);
     } else {
-      //leftServo.write(100);
-      //rightServo.write(85);
       Serial.println('R');
+      leftServo.write(110);
+      rightServo.write(75);
+      delay(465);
     }
-    delay(1500);
   } else {
-    //leftServo.write(100);
-    //leftServo.write(100);
     Serial.println('F');
-    delay(1500);
+    leftServo.write(110);
+    rightServo.write(110);
+    delay(timedelay);
   }
+  Serial.println('S');
+  leftServo.write(91);
+  rightServo.write(91);
+  delay(250);
 }
