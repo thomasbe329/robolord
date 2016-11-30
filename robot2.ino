@@ -8,8 +8,8 @@ char msg = ' ';
 void setup()
 {
   Serial.begin(9600);
-  leftServo.attach(9);
-  rightServo.attach(10);
+  rightServo.attach(9);
+  leftServo.attach(10);
 }
 
 void loop()
