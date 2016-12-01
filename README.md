@@ -1,9 +1,10 @@
-# Robolord wiki!
 Höfundar: Thomas Ari Bech og Sigurður Galdur Loftsson
 
 ## Hvað verkefnið gerir
 Þetta eru tvö vélmenni sem ferðast um eins og blind skordýr.
-Eitt vélmenni keyrir kóða sem segir til um hvert það fer og sendir svo skipanir í hitt vélmennið sem gerir eins.
+Vélmenni 1 keyrir kóða sem segir til um hvert það fer og sendir svo skipanir á vélmenni 2 þannig að það hreyfist alveg eins og vélmenni eitt.
+
+Myndband að vélmennonum að verki: [Vélmenni Tækniskólans Facebook](https://www.facebook.com/pg/V%C3%A9lmenni-T%C3%A6knisk%C3%B3lans-147435795724228/posts/)
 
 ## Flæðirit
 ![](https://github.com/thomasbe329/robolord/blob/master/robolords%20flowchart.png)
